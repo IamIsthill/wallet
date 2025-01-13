@@ -1,0 +1,45 @@
+/* GENERAL */
+body {
+    background-color: var(--BG-COLOR);
+    /* background-image: linear-gradient(to right, var(--indigo-dye), white); */
+    color: var(--FF-COLOR);
+    font-family: var(--FF);
+    font-size: var(--FF-SIZE);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+#root {
+    background-color: var(--BG-COLOR);
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+}
+
+header {
+    top: 0;
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.637);
+    /* border-bottom: gray; */
+    /* box-shadow: 10px 10px 55px -19px var(--dark); */
+}
+
+header button {
+    display: none;
+}
+
+main {
+    flex-grow: 1;
+    display: grid;
+    place-content: center;
+    text-align: center;
+
+}
+
+button {
+    font-family: inherit;
+}

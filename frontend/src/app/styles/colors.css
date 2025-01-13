@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+:root {
+    /* COLORS */
+
+    --blue-900: hsla(206, 97%, 15%, 1);
+    --blue-800: hsla(205, 98%, 20%, 1);
+    --blue-700: hsla(205, 98%, 25%, 1);
+    --blue-600: hsla(205, 99%, 26%, 1);
+    --blue-500: hsla(202, 56%, 38%, 1);
+    --blue-400: hsla(198, 57%, 40%, 1);
+    --blue-300: hsla(198, 43%, 48%, 1);
+    --blue-200: hsla(198, 44%, 57%, 1);
+    --blue-100: hsla(197, 51%, 69%, 1);
+    --light-blue: hsla(195, 54%, 78%, 1);
+
+    /* MAIN COLORS */
+    --primary: hsla(205, 98%, 25%, 1);
+    --secondary: #7E3501;
+    --light: #F0F8FF;
+    --dark: hsla(0, 0%, 7%, 1);
+    --gray: rgba(128, 128, 128, 0.637);
+
+    /* FONTS */
+    --FF: "EB Garamond", serif;
+    --FF-COLOR: var(--dark);
+    --FF-SIZE: 1.5rem;
+
+    --BG-COLOR: var(--light);
+
+
+
+    /* SPACING */
+
+    
+}

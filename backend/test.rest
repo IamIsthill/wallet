@@ -1,0 +1,10 @@
+POST http://localhost:8000/user/register/
+Content-Type: application/json
+
+{"username": "new_user", "password":"12345678"}
+
+###
+POST http://localhost:8000/api/token/
+Content-Type: application/json
+
+{"username": "Charles", "password":"12345678"}
