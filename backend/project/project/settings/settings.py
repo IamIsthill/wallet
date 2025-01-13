@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # apps
     'project.api.apps.ApiConfig',
     'project.user.apps.UserConfig',
+    'project.wallet.apps.WalletConfig',
 ]
 
 MIDDLEWARE = [
