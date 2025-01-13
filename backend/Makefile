@@ -15,3 +15,12 @@ migrate:
 app:
 	poetry run python -m project.manage startapp ${a}
 	mv ${a} project/${a}
+
+.PHONY: user
+user:
+	python -m project.manage loaddata user.json
+
+.PHONY: dump
+dump:
+	python -m project.manage dumpdata > db.json
+
