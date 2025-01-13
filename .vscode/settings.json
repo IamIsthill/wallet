@@ -1,3 +1,7 @@
 {
-    "feature-sliced-design-components.componentTemplate": "defaultComponent"
+    "feature-sliced-design-components.componentTemplate": "defaultComponent",
+    "json.schemas": [
+    ],
+    "python.defaultInterpreterPath" : "backend/.venv/"
+
 }
