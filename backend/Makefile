@@ -23,3 +23,11 @@ user:
 .PHONY: dump
 dump:
 	python -m project.manage dumpdata > db.json
+
+.PHONY: lint
+lint:
+	pre-commit run
+
+.PHONY: lint-all
+lint-all:
+	pre-commit run --all-files
