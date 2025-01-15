@@ -15,6 +15,13 @@ django-environ = "^0.11.2"
 djangorestframework-simplejwt = "^5.3.1"
 django-cors-headers = "^4.6.0"
 
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.0.1"
 
 [build-system]
 requires = ["poetry-core"]
