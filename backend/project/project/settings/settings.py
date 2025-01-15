@@ -37,15 +37,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     # third party
-    'rest_framework',
+    "rest_framework",
     "corsheaders",
-
     # apps
-    'project.api.apps.ApiConfig',
-    'project.user.apps.UserConfig',
-    'project.wallet.apps.WalletConfig',
+    "project.api.apps.ApiConfig",
+    "project.user.apps.UserConfig",
+    "project.wallet.apps.WalletConfig",
 ]
 
 MIDDLEWARE = [
@@ -81,7 +79,6 @@ TEMPLATES = [
 WSGI_APPLICATION = "project.project.wsgi.application"
 
 
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -111,8 +108,6 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
-
-
 
 
 # Default primary key field type

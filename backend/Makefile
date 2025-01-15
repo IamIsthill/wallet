@@ -6,7 +6,7 @@ run:
 migration:
 	poetry run python -m project.manage makemigrations
 	make migrate
-	
+
 .PHONY: migrate
 migrate:
 	poetry run python -m project.manage migrate
@@ -23,4 +23,3 @@ user:
 .PHONY: dump
 dump:
 	python -m project.manage dumpdata > db.json
-
