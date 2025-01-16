@@ -24,6 +24,11 @@ user:
 dump:
 	python -m project.manage dumpdata > db.json
 
+.PHONY: pre-commit
+pre-commit:
+	pre-commit install
+	pre-commit run --all-files
+
 .PHONY: lint
 lint:
 	pre-commit run
