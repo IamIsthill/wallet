@@ -1,10 +1,22 @@
-POST http://localhost:8000/user/register/
+# Wallet urls
+###
+GET http://localhost:8000/wallet-account/create/
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3MDkwMjM1LCJpYXQiOjE3MzcwODg0MzUsImp0aSI6IjA0M2VjNWJlZWUwMzQ4YjY4M2Y4Y2JkMThkNThhNWY1IiwidXNlcl9pZCI6NX0.jknavk0q63SeKvtIRo8jBsTXPF6cJDqFRSI14om5TQE
 
-{"username": "new_user", "password":"12345678"}
+{"username": "Charles", "password":"12345678"}
 
+# JWT Tokens / api
 ###
 POST http://localhost:8000/api/token/
+Content-Type: application/json
+
+{"username": "Charles", "password":"12345678"}
+
+
+# User creation / user
+###
+POST http://localhost:8000/user/register/
 Content-Type: application/json
 
 {"username": "Charles", "password":"12345678"}

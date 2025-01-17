@@ -4,7 +4,8 @@ from .models import Account
 
 
 class AccountSeriliazer(serializers.ModelSerializer):
+    user = serializers.PrimaryKeyRelatedField(many=False, read_only=True)
+
     class Meta:
         model = Account
-        fields = "__all__"
-        read_only_fields = ["user"]
+        fields = ["name", "balance", "currency", "created_at", "user"]
