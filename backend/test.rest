@@ -2,9 +2,16 @@
 ###
 GET http://localhost:8000/wallet-account/create/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3MDkwMjM1LCJpYXQiOjE3MzcwODg0MzUsImp0aSI6IjA0M2VjNWJlZWUwMzQ4YjY4M2Y4Y2JkMThkNThhNWY1IiwidXNlcl9pZCI6NX0.jknavk0q63SeKvtIRo8jBsTXPF6cJDqFRSI14om5TQE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3MjE0MTU1LCJpYXQiOjE3MzcyMTIzNTUsImp0aSI6IjE3ZWM2N2Y0YTE4ZjRiMTU4OTg5MjA4YjZkNjA3OTBiIiwidXNlcl9pZCI6NX0.cKTKe1ddYtkciVcDXav59KcfVRbBCKJfKcbyx2PJwVQ
 
 {"username": "Charles", "password":"12345678"}
+
+###
+DELETE http://localhost:8000/wallet-account/2/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3MjE2MDM0LCJpYXQiOjE3MzcyMTQyMzQsImp0aSI6ImNmOWJlNGNlOTQ2MDQ5YzE4NGI0MTBjNzIxNmJhMmY3IiwidXNlcl9pZCI6NX0.KwZct7dZ0zfB3CjokvZ0sweE23b7bSmvQ73RYyy4X84
+
+{"balance": 1}
 
 # JWT Tokens / api
 ###
