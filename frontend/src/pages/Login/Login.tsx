@@ -1,25 +1,19 @@
-import { Form, HandleSubmitProps } from "../../shared/components";
-import { api } from "../../shared/api";
+import { Form } from "../../shared/components";
+import { handleLoginSubmit } from "./api";
+import { isUserLoggedIn } from "../../shared/utils";
 
-async function handleLoginSubmit({ ...props }: HandleSubmitProps) {
-  props.e.preventDefault();
-
-  const data = {
-    username: props.username,
-    password: props.password,
-  };
-
-  const route = "/api/token/";
-
-  try {
-    const res = await api.post(route, data);
-    console.log(res.data);
-  } catch (err) {
-    console.log(err);
-  }
-}
+import { useNavigate } from "react-router";
+import { useEffect } from "react";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isUserLoggedIn()) {
+      navigate("/");
+    }
+  });
+
   return <Form method="login" handleSubmit={handleLoginSubmit} />;
 };
 

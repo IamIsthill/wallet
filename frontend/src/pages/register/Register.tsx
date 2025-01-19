@@ -1,38 +1,40 @@
-import { Navigate } from "react-router";
+import { useEffect } from "react";
+import { isUserLoggedIn } from "../../shared/utils";
+import { IRegisterProps } from "./ts";
+import { useNavigate } from "react-router";
+import { Form } from "../../shared/components";
+import { HandleSubmitProps } from "../../shared/components";
+import { api } from "../../shared/api";
 
-import { handleSubmit, handleLoginSubmit } from "./api";
-import { LOG_TOKEN } from "../../shared/contants";
-import { Form } from "./ui";
+async function handleRegisterSubmit({ ...props }: HandleSubmitProps) {
+  props.e.preventDefault();
 
-export function Register() {
-  const isLoggedIn = localStorage.getItem(LOG_TOKEN);
+  const route = "/user/register/";
+  const data = {
+    username: props.username,
+    password: props.password,
+  };
 
-  if (isLoggedIn === null) {
-    return <Form method="register" handleSubmit={handleSubmit} />;
-  } else {
-    return <Form method="login" handleSubmit={handleLoginSubmit} />;
+  try {
+    const res = await api.post(route, data);
+    console.log(res.data);
+    const navigate = useNavigate();
+    navigate("/login");
+  } catch (e) {
+    console.log(e);
   }
-
-  // const [username, setUsername] = useState<string>("");
-  // const [password, setPassword] = useState<string>("");
-  // return (
-  //   <form onSubmit={(e) => handleSubmit(e, username, password)}>
-  //     <input
-  //       type="text"
-  //       name="username"
-  //       placeholder="username"
-  //       onChange={(e) => setUsername(e.target.value)}
-  //       value={username}
-  //     />
-  //     <input
-  //       type="password"
-  //       name="password"
-  //       id="password"
-  //       placeholder="password"
-  //       onChange={(e) => setPassword(e.target.value)}
-  //       value={password}
-  //     />
-  //     <input type="submit" value="Submit" />
-  //   </form>
-  // );
 }
+
+const Register = ({ ...props }: IRegisterProps) => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isUserLoggedIn()) {
+      navigate("/");
+    }
+  });
+
+  return <Form method="register" handleSubmit={handleRegisterSubmit} />;
+};
+
+export default Register;

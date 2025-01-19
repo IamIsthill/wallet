@@ -1,9 +1,8 @@
 import { IHomeProps } from "./ts";
-import { LOG_TOKEN } from "../../shared/contants";
+import { isUserLoggedIn } from "../../shared/utils";
 
 const Home = ({ ...props }: IHomeProps) => {
-  const isLoggedIn = localStorage.getItem(LOG_TOKEN);
-  if (isLoggedIn !== null) {
+  if (isUserLoggedIn()) {
     return <div {...props}>{"Home"}</div>;
   } else {
     return <div {...props}>{"Landing"}</div>;
