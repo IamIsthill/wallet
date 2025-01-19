@@ -1,1 +1,2 @@
-export {Register} from './ui'
+export {Register} from './Register'
+export type * from './ts';

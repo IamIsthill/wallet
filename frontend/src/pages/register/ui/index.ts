@@ -1,1 +1,2 @@
-export {Register} from './Register'
+export {Form} from './Form'
+ 

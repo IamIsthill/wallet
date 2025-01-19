@@ -1,13 +1,24 @@
-import { useState } from "react";
+import { SyntheticEvent, useState } from "react";
 
-import { handleSubmit } from "../api";
+export interface HandleSubmitProps {
+  username: string;
+  password: string;
+  e: SyntheticEvent;
+}
 
-export function Register() {
+interface FormProps {
+  method: "register" | "login";
+  handleSubmit: ({ ...props }: HandleSubmitProps) => Promise<void>;
+}
+
+export function Form({ ...props }: FormProps) {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
+  const submitLabel = props.method == "register" ? "Register" : "Login";
+
   return (
-    <form onSubmit={(e) => handleSubmit(e, username, password)}>
+    <form onSubmit={(e) => props.handleSubmit({ e, username, password })}>
       <input
         type="text"
         name="username"
@@ -23,7 +34,7 @@ export function Register() {
         onChange={(e) => setPassword(e.target.value)}
         value={password}
       />
-      <input type="submit" value="Submit" />
+      <input type="submit" value={submitLabel} />
     </form>
   );
 }
