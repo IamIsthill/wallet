@@ -1,6 +1,10 @@
 import { api } from "../../../shared/api";
 import { HandleSubmitProps } from "../../../shared/components";
-import { LOG_TOKEN } from "../../../shared/contants";
+import {
+  LOG_TOKEN,
+  ACCESS_TOKEN,
+  REFRESH_TOKEN,
+} from "../../../shared/contants";
 
 export async function handleLoginSubmit({ ...props }: HandleSubmitProps) {
   props.e.preventDefault();
@@ -15,9 +19,10 @@ export async function handleLoginSubmit({ ...props }: HandleSubmitProps) {
 
   try {
     const res = await api.post(route, data);
-    console.log(res.data);
 
-    // Set the log token
+    // Save the tokens
+    localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
+    localStorage.setItem(ACCESS_TOKEN, res.data.access);
     localStorage.setItem(LOG_TOKEN, "yes");
 
     // Navigate to home

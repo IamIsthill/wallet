@@ -1,8 +1,8 @@
 # Wallet urls
 ###
-GET http://localhost:8000/wallet-account/create/
+GET http://127.0.0.1:8000/wallet-account/create/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3MjE0MTU1LCJpYXQiOjE3MzcyMTIzNTUsImp0aSI6IjE3ZWM2N2Y0YTE4ZjRiMTU4OTg5MjA4YjZkNjA3OTBiIiwidXNlcl9pZCI6NX0.cKTKe1ddYtkciVcDXav59KcfVRbBCKJfKcbyx2PJwVQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3Mzc4Nzk3LCJpYXQiOjE3MzczNzY5OTcsImp0aSI6IjgyZTJlMzY2Y2E1NzQyY2JiMjQ1YzQwMWZhODEzMjA3IiwidXNlcl9pZCI6MX0.m0zjfK7WKlrwgZzhb23gM8qCMaHrg22y5cPLP4Nw1h0
 
 {"username": "Charles", "password":"12345678"}
 
